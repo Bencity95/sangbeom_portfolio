@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>이상범 | Frontend Publisher · Portfolio</title>
+    <meta name="description" content="프론트엔드 퍼블리셔 이상범 포트폴리오 — 퍼블리싱과 UI/UX를 아우르는 하이브리드 전문가를 지향합니다." />
+    <meta name="keywords" content="이상범, 프론트엔드, 퍼블리셔, Frontend, UI/UX, Portfolio" />
+    <link rel="canonical" href="https://example.com/" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="이상범 | Frontend Publisher · Portfolio" />
+    <meta property="og:description" content="퍼블리싱과 UI/UX를 아우르는 하이브리드 전문가." />
+    <meta property="og:image" content="https://example.com/og-image.jpg" />
+    <meta property="og:url" content="https://example.com/" />
+    <link rel="icon" href="../assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "이상범",
+            "jobTitle": "Frontend Publisher",
+            "url": "https://example.com/"
+        }
+    </script>
+</head>
+
+<body class="is-loading">
+  <div class="page-transition" aria-hidden="true"></div>
+  <header>
+    <div class="container nav">
+      <a href="../index.html#home" class="logo" aria-label="Home">
+        <span class="logo-badge">SB</span>
+        <span>이상범 · Frontend</span>
+      </a>
+      <nav aria-label="주요">
+        <ul>
+          <li><a href="/index.html" data-nav="home" class="is-active">Home</a></li>
+        </ul>
+      </nav>
+      <button style="display:none" id="themeToggle" class="btn" aria-label="테마 전환">🌙</button>
+    </div>
+  </header>
+
+  <!-- 배경 루프 애니메이션 -->
+  <video class="bg-video" src="../assets/img/Cieling_Flames_Background_Loop.webm" autoplay muted loop playsinline preload="auto"></video>
+
+  <main>
+    <!-- Project Detail -->
+    <section id="project-detail" class="project-detail">
+      <div class="container">
+        <!-- Breadcrumb / Back -->
+        <nav class="pd-crumb" aria-label="Breadcrumb">
+          <a href="/index.html#projects" class="pd-back btn" data-nav="projects" aria-label="프로젝트 목록으로">←</a>
+          <span class="sep">/</span>
+          <a href="/index.html#projects" data-nav="projects">PROJECT</a>
+          <span class="sep">/</span>
+          <strong>SAS KOREA 메인/서브 페이지 — 국문화 · 신규 페이지 제작 운영/유지보수</strong>
+        </nav>
+
+        <!-- Title & Meta -->
+        <div class="pd-head">
+          <h1 class="pd-title">SAS KOREA</h1>
+          <div class="pd-meta card">
+            <dl class="pd-grid">
+              <div>
+                <dt>프로젝트 요약</dt>
+                <dd>메인/서브 국문화(Localization) 및 신규 페이지 제작 · 운영/유지보수 (AEM 기반, JS 미사용)</dd>
+              </div>
+              <div>
+                <dt>작업기여도</dt>
+                <dd>퍼블리싱 100% (시맨틱 마크업 · 접근성 · 운영)</dd>
+              </div>
+              <div>
+                <dt>프로젝트 성격</dt>
+                <dd>국문화 · 신규 페이지 제작 · 운영/유지보수</dd>
+              </div>
+              <div>
+                <dt>URL</dt>
+                <dd>
+                  <!-- 대표 링크 예시: 필요 시 실제 공개 가능 URL로 교체 -->
+                  <a class="ext" href="https://www.sas.com/ko_kr/" target="_blank" rel="noopener">https://www.sas.com/ko_kr/</a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- 사용 스택 -->
+        <section class="stack">
+          <h2 class="h2">사용스택</h2>
+          <table class="stack-table">
+            <thead>
+              <tr>
+                <th>카테고리</th>
+                <th>스킬</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>authoring</td>
+                <td><span class="badge">Adobe Experience Manager (AEM)</span></td>
+              </tr>
+              <tr>
+                <td>markup</td>
+                <td><span class="badge">Semantic HTML</span></td>
+              </tr>
+              <tr>
+                <td>style</td>
+                <td><span class="badge">CSS</span></td>
+              </tr>
+              <tr>
+                <td>analytics/personalization</td>
+                <td><span class="badge">SAS CI360</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Hero Image -->
+        <figure class="pd-hero card">
+          <img src="/assets/img/sas-full-page.png" alt="SAS Korea 메인/서브 화면 캡처" />
+          <figcaption>SAS Korea 메인/서브 국문화 페이지 대표 캡처</figcaption>
+        </figure>
+
+        <!-- 주요 기능 -->
+        <section class="pd-section">
+          <h2 class="pd-h2">주요 기능</h2>
+          <ol class="pd-list">
+            <li>
+              <strong>시맨틱 마크업 기반 퍼블리싱</strong><br />
+              AEM 템플릿/컴포넌트 구조에 맞춰 제목/본문/내비게이션 등 의미 요소를 적절히 배치하여
+              접근성과 SEO 기본기를 강화했습니다. (JS 비의존)
+            </li>
+            <li>
+              <strong>국문화(Localization) & 운영 효율화</strong><br />
+              글로벌 → 코리아 현지화 과정에서 용어 가이드 정합, 링크/리디렉션, 메타 정보 등을 점검하고,
+              반복 블록을 컴포넌트화하여 생산성과 일관성을 높였습니다.
+            </li>
+            <li>
+              <strong>CI360 태깅/속성 반영</strong><br />
+              SAS CI360 솔루션과의 연계를 고려해 페이지·콘텐츠 식별, 추적 태깅 포인트, 퍼스널라이제이션 훅을
+              퍼블리싱 단계에서 반영했습니다.
+            </li>
+          </ol>
+        </section>
+
+        <!-- 상세 내용 -->
+        <section class="pd-section">
+          <h2 class="pd-h2">상세 내용</h2>
+          <h3 class="pd-h3">SAS KOREA — 국문화 & 신규 페이지</h3>
+          <p class="pd-p">
+            AEM Authoring을 통해 메인/서브 템플릿을 기반으로 섹션 컴포넌트를 배치하고,
+            시맨틱 마크업으로 구조적 가독성을 확보했습니다. JS 사용 없이도 스타일과 배치, 접근성 보완을 통해
+            브랜드 톤&매너를 유지하며 일관된 사용자 경험을 설계했습니다.
+          </p>
+          <ul class="pd-bullets">
+            <li>템플릿/컴포넌트 매핑 · DAM 에셋 관리 · 라이프사이클 운영</li>
+            <li>로컬라이제이션 QA (용어/링크/리디렉션/메타)</li>
+            <li>접근성 기초 반영 (헤딩 구조, 대체 텍스트, 포커스 이동)</li>
+          </ul>
+          <p class="pd-p">
+            또한 CI360과의 연계를 고려해 식별자/데이터 속성 설계를 병행하여, 추후 분석 및 개인화 시나리오와의
+            호환성을 확보했습니다.
+          </p>
+        </section>
+
+        <!-- 저작권/비고 -->
+        <aside class="pd-section pd-note card">
+          <h2 class="pd-h2">저작권</h2>
+          <p class="pd-p">
+            사용된 이미지는 프로젝트 용도 혹은 구매 라이선스로 확보 및 사용되었습니다. (내부 비공개 자료는 제외)
+          </p>
+        </aside>
+
+        <section class="pd-section">
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/index.html#projects">메인으로 돌아가기</a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> 이상범 — Frontend Publisher.</div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+
+
+
+</html>

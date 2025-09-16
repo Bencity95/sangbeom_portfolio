@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guest Book</title>
+  <link rel="stylesheet" href="assets/css/guestbook.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>GUEST BOOK</h1>
+    <p class="sub">누구나 바로 남길 수 있어요. 스팸 방지를 위해 길이 제한만 걸어둡니다.</p>
+
+    <!-- 작성 폼 -->
+    <form id="writeForm" class="card">
+      <div class="row">
+        <input id="nickname" maxlength="20" placeholder="닉네임" required />
+        <input id="secret" type="password" maxlength="10" placeholder="비밀번호(선택)" />
+      </div>
+      <textarea id="message" maxlength="500" rows="4" placeholder="남기실 내용을 입력하세요 (최대 500자)" required></textarea>
+      <div class="row end">
+        <button class="btn" type="submit">작성하기</button>
+      </div>
+    </form>
+
+    <!-- 관리자 영역: 로그인/로그아웃 -->
+    <div class="admin">
+      <button id="adminLogin" class="link">관리자 로그인</button>
+      <button id="adminLogout" class="link" hidden>로그아웃</button>
+      <span id="adminBadge" class="badge" hidden>관리자 모드</span>
+    </div>
+
+    <!-- 목록 -->
+    <section id="list"></section>
+  </main>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    // ===== 0) Firebase 기본 세팅 =====
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import {
+      getFirestore, collection, addDoc, serverTimestamp, onSnapshot, query, orderBy, updateDoc, doc
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+    import {
+      getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT.appspot.com",
+      messagingSenderId: "xxxxxxxxxxxx",
+      appId: "1:xxxxxxxxxxxx:web:xxxxxxxxxxxxxx"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+
+    // ===== 1) 글 작성 =====
+    const writeForm = document.getElementById("writeForm");
+    writeForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const nickname = document.getElementById("nickname").value.trim() || "익명";
+      const secret = document.getElementById("secret").value.trim(); // 선택
+      const message = document.getElementById("message").value.trim();
+      if (!message) return;
+
+      // 간단 길이 제한 (추가 검증 가능)
+      if (message.length > 500) return alert("500자 이하로 작성해주세요.");
+
+      await addDoc(collection(db, "guestbook"), {
+        nickname,
+        message,
+        secretHash: secret ? btoa(secret) : null, // 데모용(진짜 보안 아님)
+        createdAt: serverTimestamp(),  // 작성일
+        reply: null,                   // 관리자 답글
+        repliedAt: null                // 답변일
+      });
+
+      writeForm.reset();
+    });
+
+    // ===== 2) 실시간 목록 렌더링 =====
+    const list = document.getElementById("list");
+    const q = query(collection(db, "guestbook"), orderBy("createdAt", "desc"));
+    onSnapshot(q, (snap) => {
+      list.innerHTML = "";
+      snap.forEach((d) => {
+        const item = d.data();
+        const id = d.id;
+
+        const created = item.createdAt?.toDate?.() || new Date();
+        const replied = item.repliedAt?.toDate?.();
+
+        const el = document.createElement("article");
+        el.className = "comment card";
+        el.innerHTML = `
+          <div class="head">
+            <div class="avatar">${(item.nickname || "익명").slice(0, 2)}</div>
+            <div class="meta">
+              <div class="nick">${item.nickname || "익명"}</div>
+              <div class="date">${formatDate(created)}</div>
+            </div>
+          </div>
+          <div class="body">${escapeHTML(item.message)}</div>
+
+          ${item.reply ? `
+            <div class="reply">
+              <div class="reply-head">작성자 답변 · <span>${formatDate(replied)}</span></div>
+              <div class="reply-body">${escapeHTML(item.reply)}</div>
+            </div>
+          ` : ""}
+
+          <div class="admin-reply" hidden>
+            <textarea rows="2" placeholder="답변을 입력하세요"></textarea>
+            <button class="btn small">등록</button>
+          </div>
+        `;
+
+        // 관리자 모드일 때만 답변 UI 노출
+        if (auth.currentUser) {
+          const box = el.querySelector(".admin-reply");
+          box.hidden = false;
+          box.querySelector(".btn").addEventListener("click", async () => {
+            const txt = box.querySelector("textarea").value.trim();
+            if (!txt) return;
+            await updateDoc(doc(db, "guestbook", id), {
+              reply: txt,
+              repliedAt: serverTimestamp()
+            });
+            box.querySelector("textarea").value = "";
+          });
+        }
+
+        list.appendChild(el);
+      });
+    });
+
+    // ===== 3) 관리자 로그인/로그아웃 =====
+    const adminLogin = document.getElementById("adminLogin");
+    const adminLogout = document.getElementById("adminLogout");
+    const adminBadge = document.getElementById("adminBadge");
+
+    adminLogin.addEventListener("click", async () => {
+      const email = prompt("관리자 이메일:");
+      const pwd = prompt("비밀번호:");
+      if (!email || !pwd) return;
+      try {
+        await signInWithEmailAndPassword(auth, email, pwd);
+      } catch (e) { alert("로그인 실패"); }
+    });
+
+    adminLogout.addEventListener("click", async () => {
+      await signOut(auth);
+    });
+
+    onAuthStateChanged(auth, (user) => {
+      const isAdmin = !!user;
+      adminLogin.hidden = isAdmin;
+      adminLogout.hidden = !isAdmin;
+      adminBadge.hidden = !isAdmin;
+      // 로그인 상태가 바뀌면 목록 다시 그리면서 답변 UI 노출 상태 갱신
+      // (onSnapshot에서 auth.currentUser 체크)
+    });
+
+    // ===== 유틸 =====
+    function formatDate(d) {
+      // yyyy.mm.dd HH:MM
+      const z = (n) => (n < 10 ? "0" + n : n);
+      return `${d.getFullYear()}.${z(d.getMonth()+1)}.${z(d.getDate())} ${z(d.getHours())}:${z(d.getMinutes())}`;
+    }
+    function escapeHTML(s) {
+      return s.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    }
+  </script>
+</body>
+</html>

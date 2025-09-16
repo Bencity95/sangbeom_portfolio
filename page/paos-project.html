@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>이상범 | Frontend Publisher · Portfolio</title>
+    <meta name="description" content="프론트엔드 퍼블리셔 이상범 포트폴리오 — 퍼블리싱과 UI/UX를 아우르는 하이브리드 전문가를 지향합니다." />
+    <meta name="keywords" content="이상범, 프론트엔드, 퍼블리셔, Frontend, UI/UX, Portfolio" />
+    <link rel="canonical" href="https://example.com/" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="이상범 | Frontend Publisher · Portfolio" />
+    <meta property="og:description" content="퍼블리싱과 UI/UX를 아우르는 하이브리드 전문가." />
+    <meta property="og:image" content="https://example.com/og-image.jpg" />
+    <meta property="og:url" content="https://example.com/" />
+    <link rel="icon" href="../assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "이상범",
+            "jobTitle": "Frontend Publisher",
+            "url": "https://example.com/"
+        }
+    </script>
+</head>
+
+<body class="is-loading">
+  <div class="page-transition" aria-hidden="true"></div>
+  <header>
+    <div class="container nav">
+      <a href="../index.html#home" class="logo" aria-label="Home">
+        <span class="logo-badge">SB</span>
+        <span>이상범 · Frontend</span>
+      </a>
+      <nav aria-label="주요">
+        <ul>
+          <li><a href="/index.html" data-nav="home" class="is-active">Home</a></li>
+        </ul>
+      </nav>
+      <button style="display: none;" id="themeToggle" class="btn" aria-label="테마 전환">🌙</button>
+    </div>
+  </header>
+
+  <!-- 배경 루프 애니메이션 -->
+  <video class="bg-video" src="../assets/img/Cieling_Flames_Background_Loop.webm" autoplay muted loop playsinline preload="auto"></video>
+
+  <main>
+    <!-- Project Detail -->
+    <section id="project-detail" class="project-detail">
+      <div class="container">
+        <!-- Breadcrumb / Back -->
+        <nav class="pd-crumb" aria-label="Breadcrumb">
+          <a href="/index.html#projects" class="pd-back btn" data-nav="projects" aria-label="프로젝트 목록으로">←</a>
+          <span class="sep">/</span>
+          <a href="/index.html#projects" data-nav="projects">PROJECT</a>
+          <span class="sep">/</span>
+          <strong>파오스파트너스 홈페이지 리뉴얼 및 유지보수</strong>
+        </nav>
+
+        <!-- Title & Meta -->
+        <div class="pd-head">
+          <h1 class="pd-title">Paos Partners</h1>
+          <div class="pd-meta card">
+            <dl class="pd-grid">
+              <div>
+                <dt>프로젝트 요약</dt>
+                <dd>파오스파트너스 홈페이지 리뉴얼 및 유지보수</dd>
+              </div>
+              <div>
+                <dt>작업기여도</dt>
+                <dd>퍼블리싱 100%</dd>
+              </div>
+              <div>
+                <dt>프로젝트 성격</dt>
+                <dd>리뉴얼 / 유지보수 / 인터랙션 UI 퍼블리싱</dd>
+              </div>
+              <div>
+                <dt>URL</dt>
+                <dd><a class="ext" href="https://www.ipaos.com/" target="_blank" rel="noopener">https://www.ipaos.com/</a></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- 사용 스택 -->
+        <section class="stack">
+          <h2 class="h2">사용스택</h2>
+          <table class="stack-table">
+            <thead>
+              <tr>
+                <th>카테고리</th>
+                <th>스킬</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>markup</td>
+                <td><span class="badge">HTML</span></td>
+              </tr>
+              <tr>
+                <td>style</td>
+                <td><span class="badge">CSS</span></td>
+              </tr>
+              <tr>
+                <td>script</td>
+                <td><span class="badge">JavaScript</span></td>
+              </tr>
+              <tr>
+                <td>design</td>
+                <td><span class="badge">Figma</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Hero Image -->
+        <figure class="pd-hero card">
+          <img src="/assets/img/paos-full-page.png" alt="Paos Partners 메인 화면 캡처" />
+          <figcaption>파오스파트너스 메인 히어로 섹션</figcaption>
+        </figure>
+
+        <!-- 주요 기능 -->
+        <section class="pd-section">
+          <h2 class="pd-h2">주요 기능</h2>
+          <ol class="pd-list">
+            <li>
+              <strong>반응형 및 접근성 개선</strong><br />
+              다양한 디바이스에서 일관된 UI를 제공하고, ARIA/키보드 내비게이션을 반영하여 접근성을 강화했습니다.
+            </li>
+            <li>
+              <strong>인터랙션 UI 퍼블리싱</strong><br />
+              스크롤/호버/히어로 모션 등 마이크로 인터랙션을 JS/CSS로 구현하여 브랜드 아이덴티티와 사용성 모두를 고려했습니다.
+            </li>
+            <li>
+              <strong>컴포넌트 기반 유지보수</strong><br />
+              반복 섹션을 컴포넌트화하여 콘텐츠 변경과 팝업·배너 교체 등 운영 작업을 효율화했습니다.
+            </li>
+          </ol>
+        </section>
+
+        <!-- 상세 내용 -->
+        <section class="pd-section">
+          <h2 class="pd-h2">상세 내용</h2>
+          <h3 class="pd-h3">Paos Partners</h3>
+          <p class="pd-p">
+            정보 구조를 재정리하고, 핵심 섹션(히어로·서비스·케이스·문의)을 중심으로 스토리라인을 구성했습니다.
+            인터랙션은 과하지 않게 도입해 콘텐츠 가독성을 해치지 않도록 조율했습니다.
+          </p>
+          <ul class="pd-bullets">
+            <li>공통 컴포넌트/토큰 정리(컬러·타이포·간격)</li>
+            <li>반응형 레이아웃 및 접근성(ARIA/포커스) 보완</li>
+            <li>히어로/버튼/카드 마이크로 인터랙션 제작</li>
+          </ul>
+          <p class="pd-p">
+            이미지 최적화와 지연로딩을 적용했고, 운영 단계에서는 체크리스트 기반으로 링크/메타/콘텐츠 QA를 진행해
+            안정적인 배포·유지보수를 지원했습니다.
+          </p>
+        </section>
+
+        <!-- 저작권/비고 -->
+        <aside class="pd-section pd-note card">
+          <h2 class="pd-h2">저작권</h2>
+          <p class="pd-p">
+            사용된 이미지는 프로젝트 용도 혹은 구매 라이선스로 확보 및 사용되었습니다.
+          </p>
+        </aside>
+
+        <section class="pd-section">
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/index.html#projects">메인으로 돌아가기</a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> 이상범 — Frontend Publisher.</div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+
+</html>

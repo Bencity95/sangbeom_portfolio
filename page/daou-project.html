@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>이상범 | Frontend Publisher · Portfolio</title>
+    <meta name="description" content="프론트엔드 퍼블리셔 이상범 포트폴리오 — 퍼블리싱과 UI/UX를 아우르는 하이브리드 전문가를 지향합니다." />
+    <meta name="keywords" content="이상범, 프론트엔드, 퍼블리셔, Frontend, UI/UX, Portfolio" />
+    <link rel="canonical" href="https://example.com/" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="이상범 | Frontend Publisher · Portfolio" />
+    <meta property="og:description" content="퍼블리싱과 UI/UX를 아우르는 하이브리드 전문가." />
+    <meta property="og:image" content="https://example.com/og-image.jpg" />
+    <meta property="og:url" content="https://example.com/" />
+    <link rel="icon" href="../assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "이상범",
+            "jobTitle": "Frontend Publisher",
+            "url": "https://example.com/"
+        }
+    </script>
+</head>
+
+<body class="is-loading">
+    <div class="page-transition" aria-hidden="true"></div>
+    <header>
+        <div class="container nav">
+            <a href="../index.html#home" class="logo" aria-label="Home">
+                <span class="logo-badge">SB</span>
+                <span>이상범 · Frontend</span>
+            </a>
+            <nav aria-label="주요">
+                <ul>
+                    <li><a href="/index.html" data-nav="home" class="is-active">Home</a></li>
+                    <!-- <li><a href="#about" data-nav="about">about</a></li>
+            <li><a href="#projects" data-nav="projects">Project</a></li> -->
+                    <!-- <li><a href="skills.html" data-nav="skills">Skills</a></li> -->
+                </ul>
+            </nav>
+            <button style="display: none;" id="themeToggle" class="btn" aria-label="테마 전환">🌙</button>
+        </div>
+    </header>
+
+    <!-- 배경 루프 애니메이션 -->
+    <video class="bg-video" src="../assets/img/Cieling_Flames_Background_Loop.webm" autoplay muted loop playsinline preload="auto"></video>
+    <main>
+        <!-- HOME -->
+
+        <!-- Project Detail -->
+        <section id="project-detail" class="project-detail">
+            <div class="container">
+                <!-- Breadcrumb / Back -->
+                <nav class="pd-crumb" aria-label="Breadcrumb">
+                    <a href="/index.html#projects" class="pd-back btn" data-nav="projects" aria-label="프로젝트 목록으로">←</a>
+                    <span class="sep">/</span>
+                    <a href="/index.html#projects" data-nav="projects">PROJECT</a>
+                    <span class="sep">/</span>
+                    <strong>Daou Data Members 페이지 리뉴얼 및 유지보수</strong>
+                </nav>
+
+                <!-- Title & Meta -->
+                <div class="pd-head">
+                    <h1 class="pd-title">Daou Data Members</h1>
+                    <div class="pd-meta card">
+                        <dl class="pd-grid">
+                            <div>
+                                <dt>프로젝트 요약</dt>
+                                <dd>Daou Data Members 페이지 리뉴얼 및 유지보수</dd>
+                            </div>
+                            <div>
+                                <dt>작업기여도</dt>
+                                <dd>퍼블리싱 100%</dd>
+                            </div>
+                            <div>
+                                <dt>프로젝트 성격</dt>
+                                <dd>리뉴얼 / 신규 구축 / 유지보수</dd>
+                            </div>
+                            <div>
+                                <dt>URL</dt>
+                                <dd><a class="ext" href="https://members.daoudata.co.kr/" target="_blank" rel="noopener">https://members.daoudata.co.kr/</a></dd>
+                            </div>
+                        </dl>
+
+
+                    </div>
+                </div>
+                <section class="stack ">
+                    <h2 class="h2">사용스택</h2>
+                    <table class="stack-table">
+                        <thead>
+                            <tr>
+                                <th>카테고리</th>
+                                <th>스킬</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>markup</td>
+                                <td><span class="badge">HTML</span></td>
+                            </tr>
+                            <tr>
+                                <td>style</td>
+                                <td><span class="badge">CSS</span></td>
+                            </tr>
+                            <tr>
+                                <td>script</td>
+                                <td><span class="badge">JavaScript</span></td>
+                            </tr>
+                            <tr>
+                                <td>design</td>
+                                <td><span class="badge">Figma</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+
+                <!-- Hero Image -->
+                <figure class="pd-hero card">
+                    <img src="/assets/img/daou-full-page.png" alt="Ocare Academy 메인 화면 캡처" />
+                    <figcaption>DAOU 다우데이타 메인 히어로 섹션</figcaption>
+                </figure>
+
+                <!-- 주요 기능 -->
+                <section class="pd-section">
+                    <h2 class="pd-h2">주요 기능</h2>
+                    <ol class="pd-list">
+                        <li>
+                            <strong>반응형 및 접근성 개선</strong><br />
+                            다양한 디바이스 환경에서 일관된 UI를 제공하고, ARIA 속성과 키보드 내비게이션을 반영하여 접근성을 강화했습니다.
+                        </li>
+                        <li>
+                            <strong>국문화(Localization) 퍼블리싱</strong><br />
+                            글로벌 콘텐츠를 한국 사용자 환경에 맞게 로컬라이징하고, 용어 가이드 정합과 QA 프로세스를 통해 품질을 보장했습니다.
+                        </li>
+                        <li>
+                            <strong>컴포넌트 기반 운영 효율화</strong><br />
+                            반복 요소를 컴포넌트화하여 유지보수 비용을 절감하고, 운영 과정에서의 수정·추가 작업을 간소화했습니다.
+                        </li>
+                    </ol>
+                </section>
+
+
+                <!-- 상세 내용 -->
+                <section class="pd-section">
+                    <h2 class="pd-h2">상세 내용</h2>
+                    <h3 class="pd-h3">Daou Data Members</h3>
+                    <p class="pd-p">
+                        기존 사이트 구조를 재정리하고, 반복되는 블록을 컴포넌트화하여 유지보수 효율을 높였습니다.
+                        또한 반응형 설계와 접근성(ARIA/키보드 내비게이션)을 적용해 다양한 디바이스와 사용자 환경에서
+                        일관된 경험을 제공하도록 구현했습니다.
+                    </p>
+                    <ul class="pd-bullets">
+                        <li>공통 컴포넌트화 및 재사용 구조 설계</li>
+                        <li>국문화(Localization) 퍼블리싱 대응</li>
+                        <li>반응형 레이아웃 · 접근성 개선</li>
+                    </ul>
+                    <p class="pd-p">
+                        퍼블리싱 과정에서 이미지 및 리소스를 경량화하고, QA 체크리스트 기반으로
+                        링크/메타/콘텐츠를 검수하여 안정적인 배포를 지원했습니다.
+                    </p>
+                </section>
+
+                <!-- 저작권/비고 -->
+                <aside class="pd-section pd-note card">
+                    <h2 class="pd-h2">저작권</h2>
+                    <p class="pd-p">
+                        사용된 이미지는 프로젝트 용도 혹은 구매 라이선스로 확보 및 사용되었습니다.
+                    </p>
+                </aside>
+
+                <section class="pd-section">
+                    <div class="cta-row">
+                <a class="btn btn-primary" href="/index.html#projects">메인으로 돌아가기</a>
+   
+            </div>
+                </section>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">© <span id="year"></span> 이상범 — Frontend Publisher.</div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>이상범 | Frontend Publisher · Portfolio</title>
+    <meta name="description" content="프론트엔드 퍼블리셔 이상범 포트폴리오 — 퍼블리싱과 UI/UX를 아우르는 하이브리드 전문가를 지향합니다." />
+    <meta name="keywords" content="이상범, 프론트엔드, 퍼블리셔, Frontend, UI/UX, Portfolio" />
+    <link rel="canonical" href="https://example.com/" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="이상범 | Frontend Publisher · Portfolio" />
+    <meta property="og:description" content="퍼블리싱과 UI/UX를 아우르는 하이브리드 전문가." />
+    <meta property="og:image" content="https://example.com/og-image.jpg" />
+    <meta property="og:url" content="https://example.com/" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "이상범",
+            "jobTitle": "Frontend Publisher",
+            "url": "https://example.com/"
+        }
+    </script>
+</head>
+
+<body class="is-loading">
+    <div class="page-transition" aria-hidden="true"></div>
+    <header>
+        <div class="container nav">
+            <a href="index.html#home" class="logo" aria-label="Home">
+                <span class="logo-badge">SB</span>
+                <span>이상범 · Frontend</span>
+            </a>
+            <nav aria-label="주요">
+                <ul>
+                    <li><a href="index.html#home" data-nav="home" class="is-active">Home</a></li>
+                    <li><a href="#about" data-nav="about">about</a></li>
+                    <li><a href="#projects" data-nav="projects">Project</a></li>
+                    <!-- <li><a href="skills.html" data-nav="skills">Skills</a></li> -->
+                </ul>
+            </nav>
+            <button style="display: none;" id="themeToggle" class="btn" aria-label="테마 전환">🌙</button>
+        </div>
+    </header>
+
+    <!-- 배경 루프 애니메이션 -->
+    <video class="bg-video" src="./assets/img/Cieling_Flames_Background_Loop.webm" autoplay muted loop playsinline preload="auto"></video>
+    <main>
+        <!-- HOME -->
+
+        <section id="home" class="hero container">
+            <span class="pill">프론트엔드 & 퍼블리셔</span>
+            <h1>이상범,<br />FRONTEND <br />Publisher</h1>
+            <p class="lead">프론트앤드 퍼블리셔</p>
+            <div class="grid cols-2">
+                <a class="card reveal" href="#about" data-nav="about">
+                    <div class="kicker">01</div>
+                    <div class="title">About</div>
+                    <div class="desc">저에 대하여 소개드립니다.</div>
+                </a>
+                <a class="card reveal" href="#projects" data-nav="projects">
+                    <div class="kicker">02</div>
+                    <div class="title">Work</div>
+                    <div class="desc">저의 프로젝트 작업 리스트 입니다.</div>
+                </a>
+                <!-- <a class="card reveal" href="blog.html" data-nav="blog">
+          <div class="kicker">03</div>
+          <div class="title">Blog</div>
+          <div class="desc">교육, 공부에 관한 기록 공간 입니다.</div>
+        </a> -->
+            </div>
+            <div class="cta-row">
+                <a class="btn btn-primary" href="#projects">프로젝트 소개</a>
+                <a class="btn" href="#">이력서 다운로드</a>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <div class="eyebrow">About</div>
+                        <div class="h2">프론트엔트 퍼블리셔 ‘이상범’입니다. 🖐️</div>
+                        <div class="sub">HTML CSS JS 를 주력으로 퍼블리싱하며, UI/UX와 기술을 아우르는 하이브리드 전문가로 성장하고 있습니다.</div>
+                    </div>
+                </div>
+                <div class="card reveal" style="margin-bottom:14px;">
+                    <p style="margin:0">퍼블리셔 경험을 기반으로 한 역량 확장형 전환을 통해, 사용자 중심의 직관적인 인터페이스 설계로 사용자 모두의 경험을 중요하게 생각합니다.</p>
+                </div>
+                <div class="grid cols-2">
+                    <div class="card reveal">
+                        <div class="kicker">SKILL</div>
+                        <div class="title">주요 사용 기술</div>
+
+                        <!-- HTML/CSS (Publishing) -->
+                        <div class="skill" aria-labelledby="skill-htmlcss">
+                            <h4 id="skill-htmlcss">HTML / CSS <span class="chip">Publishing</span></h4>
+                            <div class="inline-list">
+                                <span class="tag">시맨틱 마크업 · 웹표준</span>
+                                <span class="tag">반응형 레이아웃(Flex/Grid)</span>
+                                <span class="tag">BEM/Utility 네이밍</span>
+                                <span class="tag">크로스브라우징(Chrome/Edge/Safari)</span>
+                                <span class="tag">접근성(ARIA/WCAG 기초)</span>
+                                <span class="tag">SEO 메타/OG · 파비콘</span>
+                                <span class="tag">폰트 최적화 · 이미지 스프라이트/Lazyload</span>
+                                <span class="tag">애니메이션(transition/transform)</span>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript / jQuery -->
+                        <div class="skill" aria-labelledby="skill-js">
+                            <h4 id="skill-js">JavaScript / jQuery <span class="chip">Front-End</span></h4>
+                            <div class="inline-list">
+                                <span class="tag">DOM 조작 · 이벤트 위임</span>
+                                <span class="tag">AJAX/Fetch · 폼 검증</span>
+                                <span class="tag">탭/아코디언/모달 등 UI 컴포넌트</span>
+                                <span class="tag">간단한 상태/모듈화(ESM)</span>
+                                <span class="tag">버그 트래킹(콘솔/디버거)</span>
+                            </div>
+                        </div>
+
+                        <!-- Adobe Experience Manager -->
+                        <div class="skill" aria-labelledby="skill-aem">
+                            <h4 id="skill-aem">Adobe Experience Manager <span class="chip">AEM</span></h4>
+                            <div class="inline-list">
+                                <span class="tag">페이지/템플릿 편집</span>
+                                <span class="tag">컴포넌트 저작/배치</span>
+                                <span class="tag">DAM 에셋 관리</span>
+                                <span class="tag">워크플로/버전 관리</span>
+                                <span class="tag">퍼블리시/라이브 업데이트</span>
+                            </div>
+                        </div>
+
+                        <!-- Design Tools -->
+                        <div class="skill" aria-labelledby="skill-design">
+                            <h4 id="skill-design">Figma / Photoshop <span class="chip">Design</span></h4>
+                            <div class="inline-list">
+                                <span class="tag">와이어프레임/시안 제작</span>
+                                <span class="tag">디자인 시안 → 퍼블리싱</span>
+                                <span class="tag">에셋 추출 · 이미지 최적화</span>
+                                <span class="tag">로고/아이콘 간단 제작</span>
+                                <span class="tag">색보정/리터치</span>
+                            </div>
+                        </div>
+
+                        <!-- Workflow / Tools -->
+                        <div class="skill" aria-labelledby="skill-tools">
+                            <h4 id="skill-tools">Workflow & Tools <span class="chip">Ops</span></h4>
+                            <div class="inline-list">
+                                <span class="tag">Git/GitHub 기초 협업</span>
+                                <span class="tag">Chrome DevTools · Lighthouse</span>
+                                <span class="tag">크로스브라우저 테스트</span>
+                                <span class="tag">간단 배포(정적 호스팅)</span>
+                                <span class="tag">오류 재현/이슈 리포팅</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card reveal">
+                        <div class="kicker">EDU & WORK</div>
+                        <div class="title">교육 · 경력</div>
+                        <div class="timeline" aria-label="교육 및 경력 타임라인">
+                            <div class="timeline-item"><strong>GTP 포토샵 1급</strong></div>
+                            <div class="timeline-item"><strong>디지털웹퍼블리셔 양성과정</strong> [700H]</div>
+                            <div class="timeline-item"><strong>대구대학교 환경공학과</strong> (중퇴)</div>
+                            <div class="timeline-item"><strong>파오스파트너스</strong> · 2021.06 ~ 2024.09</div>
+                            <div class="timeline-item"><strong>콘센트릭스서비스코리아 유한회사</strong> · 2024.10 ~ 2024.12</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <div class="eyebrow">PROJECT</div>
+                        <div class="h2">WORK, ARCHIVE</div>
+                        <div class="sub">토이 프로젝트, 직장에서 및 작업하였던 프로젝트 기록 입니다. 공개 가능 프로젝트만 게시합니다.</div>
+                    </div>
+                </div>
+                <div class="grid cols-2">
+
+
+
+
+                    <!-- 프로젝트 카드: Daou Data Members 리뉴얼 -->
+                    <article class="card project-card reveal project-daou" id="proj-daou">
+                        <!-- <div class="kicker">사용 툴 : Adobe Experience Manager</div> -->
+
+                        <div class="title">
+                            Daou Data Members <br> 페이지 리뉴얼 및 유지보수
+                        </div>
+
+
+
+                        <div class="card-page-img">
+                            <!-- 썸네일은 적절한 이미지로 교체하세요 -->
+                            <img src="assets/img/daou_content.png" alt="Daou Data Members 리뉴얼 썸네일">
+                        </div>
+
+                        <p class="desc">
+                            수행 기간 <strong>61일</strong> — 정보 구조 재정리와 컴포넌트화, 반응형/접근성 개선을 통해
+                            운영 효율과 사용자 탐색 경험을 향상시켰습니다. <br>
+                            팀 구성: Dev 1 · Publisher 1(본인) · Designer 1
+                        </p>
+
+                        <div class="meta">
+                            <!-- AEM & 저작/운영 -->
+                            <span class="badge">AEM Authoring</span>
+                            <span class="badge">템플릿/컴포넌트 배치</span>
+                            <span class="badge">DAM 에셋 관리</span>
+                            <span class="badge">버전/워크플로</span>
+
+                            <!-- 로컬라이제이션/국문화 -->
+                            <span class="badge">i18n/국문화 가이드</span>
+                            <span class="badge">링크/리디렉션 QA</span>
+
+                            <!-- 품질/성능/접근성/검색 -->
+                            <span class="badge">웹 접근성(키보드/ARIA)</span>
+                            <span class="badge">SEO 메타/OG</span>
+                            <span class="badge">반응형 그리드</span>
+                        </div>
+
+                        <div class="cta-row">
+                            <a class="btn btn-primary" href="/page/daou-project.html">상세</a>
+                            <a class="btn" href="https://members.daoudata.co.kr/" aria-disabled="true">사이트 바로가기</a>
+                        </div>
+
+                    </article>
+
+                    <!-- 프로젝트 카드: PAOS (ipaos.com) -->
+                    <article class="card project-card reveal project-ipaos" id="proj-ipaos">
+                        <div class="title">
+                            PAOS PARTNERS 공식 웹사이트
+                            <br />퍼블리싱 & 유지보수
+                        </div>
+                        <div class="card-page-img">
+                            <!-- 썸네일은 실제 캡처로 교체하세요 -->
+                            <img src="assets/img/paos_content.png" alt="PAOS 웹사이트 썸네일">
+                        </div>
+
+                        <p class="desc">
+                            수행 기간 <strong>28일</strong> — 퍼블리싱 전반과 인터랙션 제작,
+                            반응형/접근성 레이아웃 퍼블리싱
+                            <br />
+                            팀 구성: Designer 1 · Publisher 1(본인)
+                            <span class="dot">•</span> 화면 디자인 참여(Figma 협업)
+                        </p>
+
+                        <div class="meta">
+                            <!-- 겹치지 않는 태그 위주로 재구성 -->
+                            <span class="badge">Semantic HTML 구조화</span>
+                            <span class="badge">반응형 그리드/타이포</span>
+                            <span class="badge">마이크로 인터랙션(JS)</span>
+                            <span class="badge">Figma Handoff 정리</span>
+                            <span class="badge">에셋 최적화(WebP/Lazy)</span>
+                            <span class="badge">접근성 기초(:focus-visible)</span>
+                            <span class="badge">SEO 메타/OG 기본</span>
+                            <span class="badge">Lighthouse 점검</span>
+                        </div>
+
+                        <div class="cta-row">
+                            <a class="btn btn-primary" href="/page/paos-project.html">상세</a>
+                            <a class="btn" href="https://www.ipaos.com/" target="_blank" rel="noopener">사이트 바로가기</a>
+                        </div>
+
+                    </article>
+
+                    <!-- 프로젝트 카드: DeWALT Korea (dewalt.co.kr) -->
+                    <article class="card project-card reveal project-dewalt" id="proj-dewalt">
+
+
+                        <div class="title">
+                            DeWALT Korea
+                            <br />메인 리뉴얼 및 유지보수
+                        </div>
+
+                        <div class="card-page-img">
+
+                            <img src="assets/img/dewalt_content.png" alt="DeWALT Korea 리뉴얼 썸네일">
+                        </div>
+
+                        <p class="desc">
+                            수행 기간 <strong>2년</strong> — 메인 정보 구조 재정리와 반응형 퍼블리싱, 인터랙션(JS) <br>
+                            운영/유지보수 프로세스 정비
+                            <br />
+                            팀 구성: Dev 1 · Publisher 1(본인) · Designer 1
+                        </p>
+
+                        <div class="meta">
+                            <!-- 겹치지 않게 퍼블리싱/운영 중심 태그로 구성 -->
+                            <span class="badge">Semantic HTML 구조화</span>
+                            <span class="badge">반응형 그리드/타이포</span>
+                            <span class="badge">헤더/히어로 인터랙션</span>
+                            <span class="badge">컴포넌트화 & 재사용</span>
+                            <span class="badge">이미지 최적화(WebP/Lazy)</span>
+                            <span class="badge">접근성 기초(:focus-visible/aria)</span>
+                            <span class="badge">메타/OG/기본 SEO</span>
+                            <span class="badge">운영/배포 QA</span>
+                        </div>
+
+                        <div class="cta-row">
+                            <a class="btn btn-primary" href="/page/dewalt-project.html">상세</a>
+                            <a class="btn" href="http://www.dewalt.co.kr/main" target="_blank" rel="noopener">사이트 바로가기</a>
+                        </div>
+
+                    </article>
+                    <article class="card project-card reveal">
+                        <!-- <div class="kicker">사용 툴 : Adobe Experience Manager </div> -->
+                        <div class="title">
+                            SAS KOREA 메인/서브 페이지 <br> 국문화 · 신규 페이지 제작 운영/유지보수
+                        </div>
+                        <div class="card-page-img">
+                            <img src="assets/img/sas_content.png" alt="sas_content">
+                        </div>
+                        <p class="desc">
+
+                            수행 기간 <strong>3년</strong> — 국문화 로컬라이제이션 <br> 전용 인텔리진(지식 콘텐츠) 생성/업데이트, 운영·배포·QA <br>
+                            참여율 100%
+                        </p>
+
+                        <div class="meta">
+                            <!-- AEM & 저작/운영 -->
+                            <span class="badge">AEM Authoring · 템플릿/컴포넌트 배치</span>
+                            <span class="badge">DAM 에셋 관리 · 버전/워크플로</span>
+                            <span class="badge">퍼블리시/라이브 반영 · 롤백 대응</span>
+
+                            <!-- 로컬라이제이션/국문화 -->
+                            <span class="badge">i18n 로컬라이제이션 · 용어 가이드 정합</span>
+                            <span class="badge">글로벌 → KOREA 콘텐츠 현지화</span>
+                            <span class="badge">국문화 QA · 링크/리디렉션 점검</span>
+
+                            <!-- 품질/성능/접근성/검색 -->
+                            <span class="badge">웹 접근성 기초(ARIA) · 키보드 내비</span>
+                            <span class="badge">SEO 메타/OG/구조화데이터 기초</span>
+
+                        </div>
+
+                        <div class="cta-row">
+                            <a class="btn btn-primary" href="page/sas-project.html">상세</a>
+                            <a class="btn" href="https://www.sas.com/ko_kr/home.html" aria-disabled="true">사이트 바로가기</a>
+                        </div>
+                    </article>
+                    <!-- 프로젝트 카드: Campaign Registration Pages (campaignmanager) -->
+                    <article class="card project-card reveal project-campaign" id="proj-campaign">
+                        <!-- <div class="kicker">사용 툴 : HTML/CSS/JS</div> -->
+
+                        <div class="title">
+                            DELL Campaign Registration Pages
+                            <br />이벤트·상담 등록 랜딩 페이지 퍼블리싱
+                        </div>
+
+                        <div class="card-page-img">
+                            <!-- 썸네일은 실제 캡처로 교체하세요 -->
+                            <img src="assets/img/dell_content.png" alt="캠페인 등록/이벤트 랜딩 썸네일">
+                        </div>
+
+                        <p class="desc">
+                            수행 기간 <strong>3년</strong> — 매주 6~11건 설문페이지 제작 <br>
+                            공통 컴포넌트화 재사용 템플릿을 구축 및 제작 시간 단축
+                            <br />
+                            팀 구성: Dev 1 · Publisher 1(본인) · Designer 1
+                        </p>
+
+                        <div class="meta">
+                            <span class="badge">등록 폼 · 유효성 검증</span>
+                            <span class="badge">반응형 레이아웃</span>
+                            <span class="badge">컴포넌트/템플릿화</span>
+                            <span class="badge">UTM/GA 이벤트 태깅</span>
+                            <span class="badge">이미지 최적화(WebP/Lazy)</span>
+                            <span class="badge">접근성 기초(레이블/포커스)</span>
+                            <span class="badge">카운트다운/배지 UI</span>
+                            <span class="badge">신속 QA/배포</span>
+                        </div>
+
+                        <div class="cta-row">
+                            <a class="btn btn-primary" href="/page/dell-project.html">상세</a>
+                            <a class="btn" href="https://www.campaignmanager.co.kr/newpromax/" target="_blank" rel="noopener">사이트 바로가기</a>
+                        </div>
+
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG 미리보기 -->
+        <!-- <section id="blog">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">BLOG</div>
+            <div class="h2">DEV BLOG</div>
+            <div class="sub">Tech Archive — code, 퍼블리싱, 그리고 기술 기록</div>
+          </div>
+          <div><a href="blog.html" class="btn">전체 보기</a></div>
+        </div>
+        <article class="post reveal">
+          <div class="toggle" role="button" aria-expanded="false">
+            <h3>Web Vitals, 프론트엔드의 필수 역량</h3>
+            <p class="excerpt">웹 성능 지표(LCP/INP/CLS)로 UX를 계량화하고 개선합니다.</p>
+          </div>
+          <div class="content">
+            <p>Web Vitals은 사용자의 UX를 구글이 객관적으로 평가하기 위해 정의한 핵심 지표입니다.</p>
+            <p><a class="btn" href="blog.html">더 보기</a></p>
+          </div>
+        </article>
+      </div>
+    </section> -->
+    </main>
+
+    <footer>
+        <div class="container">© <span id="year"></span> 이상범 — Frontend Publisher.</div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
