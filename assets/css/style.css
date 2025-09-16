@@ -248,9 +248,7 @@ body.is-loading .page-transition{opacity:1}
   display: grid; gap: 10px;
   grid-template-columns: repeat(2, minmax(0,1fr));
 }
-@media (max-width: 720px){
-  .project-detail .pd-grid { grid-template-columns: 1fr; }
-}
+
 .project-detail .pd-grid dt {
   font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
   color: var(--muted); font-weight: 800; margin-bottom: 4px;
@@ -351,4 +349,37 @@ html[data-theme="light"] .project-detail .ext { border-color: rgba(0,0,0,.25); }
   font-weight: 600;
   color: var(--text);
   white-space: nowrap;
+}
+/* 반응형 미디어 */
+
+@media (max-width: 720px){
+  .project-detail .pd-grid { grid-template-columns: 1fr; }
+  .container {padding-inline: 15px;}
+  .nav{padding-inline: 15px;}
+  .logo-text{
+    display: none;
+  }
+  .container{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .card .title{
+    font-size: 17px;
+  }
+
+  .desc{
+    font-size: 15px;
+  }
+
+  /* 상세페이지 안의 브레드크럼에서, 뒤로가기 외 모두 숨김 */
+  .project-detail .pd-crumb > * { display: none; }
+  .project-detail .pd-crumb > a.pd-back { 
+    display: inline-flex;   /* 버튼 레이아웃 유지 */
+    align-items: center;
+  }
+
+  .pd-list{
+    font-size: 15px;
+  }
 }
